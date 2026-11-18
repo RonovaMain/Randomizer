@@ -34,13 +34,13 @@ fun MainScreen(vm: MainVm, nav: NavHostController) {
             TopAppBar(
                 title = { Text("Randomizer", fontWeight = FontWeight.Bold) },
                 actions = {
-                    IconButton(onClick = { fb.setVibration(!fb.vibration) }) {
+                    IconButton(onClick = { fb.updateVibration(!fb.vibration) }) {
                         Icon(
                             Icons.Default.Vibration, "Вибро",
                             tint = if (fb.vibration) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
                         )
                     }
-                    IconButton(onClick = { fb.setSound(!fb.sound) }) {
+                    IconButton(onClick = { fb.updateSound(!fb.sound) }) {
                         Icon(
                             if (fb.sound) Icons.Default.VolumeUp else Icons.Default.VolumeOff, "Звук",
                             tint = if (fb.sound) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,

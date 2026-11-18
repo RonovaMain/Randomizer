@@ -20,12 +20,12 @@ class Feedback(ctx: Context) {
     var sound by mutableStateOf(prefs.getBoolean("sound", true))
         private set
 
-    fun setVibration(v: Boolean) {
+    fun updateVibration(v: Boolean) {
         vibration = v
         prefs.edit().putBoolean("vibration", v).apply()
     }
 
-    fun setSound(v: Boolean) {
+    fun updateSound(v: Boolean) {
         sound = v
         prefs.edit().putBoolean("sound", v).apply()
     }
